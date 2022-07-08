@@ -1,0 +1,34 @@
+#!/bin/bash
+echo 	          SCRIPT 2
+echo - - - - - - - - - - - - - - - - - - - 
+echo 
+echo    SCRIPT REALIZADO POR EDISON 
+echo
+echo - - - - - - - - - - - - - - - - - - - 
+echo "Usuarios que existen en el fichero"
+cat usuarios.txt
+echo
+choice=2
+echo "Indique que desea modificar:"
+echo "1. Eliminar un usuario"
+echo "2. Modificar fecha"
+NUM1=1
+NUM2=2
+if [ $eleccion = = $NUM1 ]; then
+
+	echo "Elimina el usuario,escogiendo  el número de fila apartir de la fila 2"
+	read eliminarusuario
+	sed -i $eliminarusuario'd' usuarios.txt
+	cat usuarios.txt
+
+elif [ $eleccion = = $NUM2 ]; then
+	echo "Modifica la fecha de vencimiento del usuario"
+	echo "Cambiamos la fecha antigua por la nueva que se va ha escribir"
+	read fechanueva
+	sed -i 's/'
+fi
+
+
+¡IMPORTANTE NO HE PODIDO TERMINAR YA QUE AL MODIFICAR LA FECHA  ME SALE ERRORES DE SINTAXIS!
+
+¡IMPORTANTE  SE DEBERÁ DE AGREGAR PRIVILEGIOS CHMOD +X adminusers.sh!

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo - - - - - - - - - - - - - - - - - - - 
+echo 
+echo    SCRIPT REALIZADO POR EDISON 
+echo
+echo - - - - - - - - - - - - - - - - - - - 
+
+echo "¿Cuál es tú nombre?"
+read nombre
+echo "¿Cuál es tu apellido?"
+read apellido
+echo "¿Dime la fecha de expiración?"
+read fecha
+
+usuario=${nombre:0:3}${apellido:0:3}
+
+password=${nombre:0:1}$(shuf -i 1000-2000 -n1)${apellido:0:1}
+
+echo -e $usuario '\t\t'  $password '\t' $nombre $apellido '\t\t'  $fecha >> usuarios.txt
+
+cat usuarios.txt
+
+¡IMPORTANTE  SE DEBERÁ DE AGREGAR PRIVILEGIOS CHMOD +X creausers.sh!
